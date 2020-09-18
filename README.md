@@ -1,0 +1,1 @@
+Aplicativo simples para listagem de produtos, consumindo API REST desenvolvida com Node JS.
