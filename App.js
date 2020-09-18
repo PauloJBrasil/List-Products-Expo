@@ -10,7 +10,6 @@ const Root = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-
       <Root.Navigator 
       screenOptions={{
         headerStyle: {
@@ -26,20 +25,18 @@ export default function App() {
           name="Screen1" 
           component={Screen} 
           options={{
-            title: 'Main',
+            title: Screen.navigationOptions.title,
           }}
         />
 
         <Root.Screen 
           name="Screen2" 
           component={Screen_second}
-          options={{
-            title: 'Second',
-          }}
+          options={({ route }) => ({ title: route.params.product.title })}
         />
 
       </Root.Navigator>
-      
+
     </NavigationContainer>
   );
 }
